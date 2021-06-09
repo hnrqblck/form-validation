@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="registration-form">
+                <h1>Registration Form</h1>
+                <div class="form-rules">
+                    <ul>
+                        <li>No field can be empty</li>
+                        <li>Username can only be written with letters and numbers</li>
+                        <li>Username's length must be between 3 and 12 characters</li>
+                        <li>Password's length must be between 6 and 12 characters</li>
+                    </ul>
+                </div>
+                <form action="/"
+                method="post"
+                class="form">
+                <label for="">Name:</label>
+                <input type="text" class="name valid">
+                
+                <label for="">Lastname:</label>
+                <input type="text" class="lastname valid">
+
+                <label for="">CPF:</label>
+                <input type="text" class="cpf valid">
+
+                <label for="">Username:</label>
+                <input type="text" class="username valid">
+                
+                <label for="">Password:</label>
+                <input type="password" class="password valid">
+
+                <label for="">Confirm Password:</label>
+                <input type="password" class="confirm-password valid">
+
+                <button>Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</body>
+</html>
