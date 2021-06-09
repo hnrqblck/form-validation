@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="registration-form">
+                <h1>Registration Form</h1>
+                <div class="form-rules">
+                    <ul>
+                        <li>No field can be empty</li>
+                        <li>Username can only be written with letters and numbers</li>
+                        <li>Username's length must be between 3 and 12 characters</li>
+                        <li>Password's length must be between 6 and 12 characters</li>
+                    </ul>
+                </div>
+                <form action="/"
+                method="post"
+                class="form">
+                <label for="name">Name:</label>
+                <input type="text" class="name valid" name="name">
+                
+                <label for="lastname">Lastname:</label>
+                <input type="text" class="lastname valid" name="lastname">
+                
+                <label for="profile-pic">Profile picture:</label>
+                <input type="url" class="profile-pic valid" name="profile-pic" placeholder="https://">
+                
+                <label for="username">Username:</label>
+                <input type="text" class="username valid" name="username">
+
+                <label for="cpf">CPF:</label>
+                <input type="text" class="cpf valid" name="cpf" placeholder="000.000.000-00">
+                
+                <label for="password">Password:</label>
+                <input type="password" class="password valid" name="password">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" class="confirm-password valid" name="confirm-password">
+
+
+                <p><%= user.name %></p>
+
+                <button>Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Henrique Black &copy 2021</p>
+    </footer>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    
+    <div id="modal" class="modal-container">
+        <div class="modal">
+            <button class="close">x</button>
+            <img src=" <%= user["profile-pic"] %>" alt="">
+            <p><%= user.username %></p>
+            <p><%= user.name + ' ' + user.lastname %></p>
+            <p><%= user.cpf %></p>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

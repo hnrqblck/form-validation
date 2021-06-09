@@ -1,0 +1,27 @@
+{
+  "name": "form-validation",
+  "version": "1.0.0",
+  "description": "Form Validation practice (curso js udemy)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnrqblck/form-validation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hnrqblck/form-validation/issues"
+  },
+  "homepage": "https://github.com/hnrqblck/form-validation#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
