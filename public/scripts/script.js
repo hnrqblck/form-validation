@@ -1,16 +1,17 @@
 class ValidatesForm {
     constructor() {
         this.form = document.querySelector('.form');
+        this.modal = document.getElementById('modal');
         this.formEvents();
     }
-
+    
     formEvents() {
         this.form.addEventListener('submit', e => {
-            this.handleSubmit(e); 
+            this.handleSubmit(e);
         })
-
+        this.closeModal();
     }
-
+    
     handleSubmit(e) {
         e.preventDefault();
         this.areFieldsValid();
@@ -18,9 +19,8 @@ class ValidatesForm {
         this.isPasswordValid();
         this.arePasswordsEqual();
         this.isCPFValid();
-
+        
         if (this.valid) {
-            alert('Form submitted successfully!');
             this.form.submit();
         }
     }
@@ -133,6 +133,19 @@ class ValidatesForm {
         if (this.digit > 9) return this.digit = '0';
         return this.digit = String(this.digit);
     }
+
+    closeModal() {
+        const close = this.modal.querySelector('.close');
+        
+        close.addEventListener('click', e => {
+            modal.classList.remove('active');
+        });
+
+        this.modal.addEventListener('click', e => {
+            if(e.target.classList.contains('modal-container')) modal.classList.remove('active');
+        })
+    }
 }
+
 
 const validated = new ValidatesForm();

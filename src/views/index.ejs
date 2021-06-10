@@ -44,9 +44,6 @@
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" class="confirm-password valid" name="confirm-password">
 
-
-                <p><%= user.name %></p>
-
                 <button>Submit</button>
                 </form>
             </div>
@@ -60,13 +57,17 @@
     <div class="circle1"></div>
     <div class="circle2"></div>
     
-    <div id="modal" class="modal-container">
+    <div id="modal" class="modal-container <%= user.active %> ">
         <div class="modal">
             <button class="close">x</button>
-            <img src=" <%= user["profile-pic"] %>" alt="">
-            <p><%= user.username %></p>
-            <p><%= user.name + ' ' + user.lastname %></p>
-            <p><%= user.cpf %></p>
+            <div class="card">
+                <img src=" <%= user["profile-pic"] %>" alt="">   
+                <div class="card-info"></div>
+                    <h2><%= user.username %></h2>
+                    <p><%= user.name + ' ' + user.lastname %></p>
+                    <p><%= user.cpf %></p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -6,7 +6,8 @@ const views = __dirname + "/views/";
 const User = {
     data:
         {
-            name: 'gita'
+            name: 'gita',
+            active: ''
         },
     constrollers: {
         index(req, res) {
@@ -21,9 +22,10 @@ const User = {
                 "profile-pic": req.body["profile-pic"],
                 username: req.body.username,
                 cpf: req.body.cpf,
-                password: req.body.password
+                password: req.body.password,
+                active: 'active'
             };
-            return res.redirect('/');
+            return res.render(views + "index", { user: User.data });
         }
     }
 }
