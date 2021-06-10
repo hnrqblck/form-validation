@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <main>
@@ -61,7 +62,9 @@
         <div class="modal">
             <button class="close">x</button>
             <div class="card">
-                <img src=" <%= user["profile-pic"] %>" alt="">   
+                <div class="card-img">
+                    <img src=" <%= user["profile-pic"] %>" alt="">   
+                </div>
                 <div class="card-info"></div>
                     <h2><%= user.username %></h2>
                     <p><%= user.name + ' ' + user.lastname %></p>

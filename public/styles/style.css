@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('./modal.css');
+@import url('./global.css');
 
-:root {
-    --primary-color: #ddd6f3;
-    --secondary-color: #faaca8;
-    --primary-color-darker-2: hsl(240, 6%, 10%);
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: -5px 8px 15px rgba(0, 0, 0, 0.25);
-    --transition: all 0.4s linear;
-}
 
 * {
     box-sizing: border-box;
@@ -28,27 +22,6 @@ main {
     justify-content: center;
     font-size: 1.3em;
     line-height: 1.5em;
-}
-
-.container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #fff;
-    min-height: 80vh;
-    /* width: 80%; */
-    background: linear-gradient(to right bottom, rgba(255,255,255, 0.5), rgba(255,255,255, 0.1));
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(0.2rem);
-    transition: all 0.5s linear;
-    position: relative;
-    z-index: 2;
-}
-
-.container:hover {
-    backdrop-filter: blur(1rem);
-    box-shadow: var(--dark-shadow);
-    transition: var(--transition);
 }
 
 .circle1, .circle2 {
@@ -75,9 +48,38 @@ main {
     right: 11%;
 }
 
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+/* -------------------------- CONTAINER ----------------------------*/
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    min-height: 80vh;
+    /* width: 80%; */
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.5), rgba(255,255,255, 0.1));
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(0.2rem);
+    transition: all 0.5s linear;
+    position: relative;
+    z-index: 2;
+}
+
+.container:hover {
+    backdrop-filter: blur(1rem);
+    box-shadow: -5px 8px 15px rgba(0, 0, 0, 0.25);
+    transition: var(--transition);
+}
+
+
 h1 {
-    /* color: var(--primary-color-darker-2); */
-    /* color: #fff; */
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -85,7 +87,7 @@ h1 {
     opacity: 0.8;
 }
 
-/* FORM RULES*/
+/* --------------------------FORM RULES----------------------------*/
 
 .form-rules {
     display: flex;
@@ -124,7 +126,7 @@ h1 {
     padding-left: 1.2REM;
 }
 
-/* FORM */
+/* -------------------------- FORM ----------------------------------*/
 
 form input, form label, form button {
     display: block;
@@ -155,7 +157,7 @@ form input, form label, form button {
     border-radius: 0.3rem;
     /* background: var(--primary-color-darker); */
     background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255, 0.3));
-    color: var(--primary-color-darker-2);
+    color: hsl(240, 6%, 10%);
     font-size: 18px;
     font-weight: 700;
     height: 50px;
@@ -170,108 +172,11 @@ form button:hover {
     opacity: 0.6;
 }
 
-/* ERR MESSAGE */
+/* ----------------- ERR MESSAGE ------------------------*/
 
 .err-message {
     font-size: 0.8rem;
     color: rgb(209, 32, 32);
 }
 
-footer {
-    margin-top: 20px;
-    text-align: center;
-    color: white;
-    font-weight: 500;
-}
 
-/* MODAL */
-
-.modal-container {
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(0.3rem);
-}
-
-.modal-container.active {
-    display: flex;
-}
-
-.modal {
-    background: white;
-    width: 40%;
-    height: 33%;
-    min-width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255,255,255, 0.7));
-    backdrop-filter: blur(2rem);
-}
-
-@keyframes modal {        
-    from {
-        opacity: 0;
-        transform: translate3d(0, -60px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.active .modal {
-    animation: modal .3s;
-}
-
-.close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 0px;
-    background: transparent;
-    cursor: pointer;
-    /* box-shadow: var(--light-shadow); */
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; */
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: var(--primary-color-darker);
-}
-
-.close:hover {
-    box-shadow: inset 3px 5px 7px rgba(0, 0, 0, 0.1);
-    transition: all 0.1s linear;
-}
-
-.card {
-    display: relative;
-    justify-content: space-between;
-}
-
-.card img{
-    width: 6.5rem; 
-    height: 6.5rem; 
-    border-radius: 50%;
-    border: 0.156rem solid var(--primary-color);
-    top: 0px;
-    left: 5px;
-    float: left;
-}
-
-.card .card-info {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 20px;
-  }
