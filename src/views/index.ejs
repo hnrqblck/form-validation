@@ -65,10 +65,10 @@
                 <div class="card-img">
                     <img src=" <%= user["profile-pic"] %>" alt="">   
                 </div>
-                <div class="card-info"></div>
-                    <h2><%= user.username %></h2>
-                    <p><%= user.name + ' ' + user.lastname %></p>
-                    <p><%= user.cpf %></p>
+                <div class="card-info">
+                    <h2><%= user.name + ' ' + user.lastname %></h2>
+                    <p>Username: <%= user.username %></p>
+                    <p>ID: <%= user.cpf %></p>
                 </div>
             </div>
         </div>

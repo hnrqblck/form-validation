@@ -21,11 +21,12 @@
 .modal {
     width: 40%;
     height: 33%;
-    min-width: 300px;
-    padding: 20px;
+    min-width: 40%;
+    padding: 5px;
     border-radius: 10px;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255,255,255, 0.5));
     backdrop-filter: blur(2rem);
+    position: fixed;
 }
 
 .modal::before {
@@ -85,30 +86,51 @@
 }
 
 .card img{
-    width: 6.5rem; 
-    height: 6.5rem; 
-    border-radius: 50%;
+    width: 39%; 
+    height: auto; 
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
     top: 0px;
-    left: 5px;
+    left: 0px;
     float: left;
 }
 
 .card-img::before {
     content: "";
-    width: 7rem; 
-    height: 7rem;
+    width: 40%; 
+    height: 100%;
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     position: absolute;
-    bottom: 65px;
-    left: 12px;
-    border-radius: 50%;
+    bottom: 0px;
+    left: 0px;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
     z-index: -1;
 }
 
-.card .card-info {
+.card-info {
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 20px;
-  }
+    padding: 10px 0px 10px 20px;
+    bottom: 0px;
+    left: 0px;
+    align-items: center;
+    
+}
+
+.card-info h2 {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    letter-spacing: 0.2rem;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 15px;
+}
+
+.card-info p {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: var(--primary-color-darker);
+}
