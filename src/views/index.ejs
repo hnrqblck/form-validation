@@ -24,27 +24,43 @@
                 <form action="/"
                 method="post"
                 class="form">
-                <label for="name">Name:</label>
-                <input type="text" class="name valid" name="name">
-                
-                <label for="lastname">Lastname:</label>
-                <input type="text" class="lastname valid" name="lastname">
-                
-                <label for="profile-pic">Profile picture:</label>
-                <input type="url" class="profile-pic valid" name="profile-pic" placeholder="https://">
-                
-                <label for="username">Username:</label>
-                <input type="text" class="username valid" name="username">
+                <div class="flex">
+                    <div class="form-line">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" class="name valid" name="name">
+                        </div>
+                        <div>
+                            <label for="lastname">Lastname:</label>
+                            <input type="text" class="lastname valid" name="lastname">
+                        </div>                    
+                    </div>
 
-                <label for="cpf">CPF:</label>
-                <input type="text" class="cpf valid" name="cpf" placeholder="000.000.000-00">
-                
-                <label for="password">Password:</label>
-                <input type="password" class="password valid" name="password">
+                    <label for="profile-pic">Profile picture:</label>
+                    <input type="url" class="profile-pic valid" name="profile-pic" placeholder="https://">
 
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" class="confirm-password valid" name="confirm-password">
+                    <div class="form-line">
+                        <div>
+                            <label for="username">Username:</label>
+                            <input type="text" class="username valid" name="username">
+                        </div>
+                        <div>
+                            <label for="cpf">CPF:</label>
+                            <input type="text" class="cpf valid" name="cpf" placeholder="000.000.000-00">
+                        </div>
+                    </div>
 
+                    <div class="form-line">
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" class="password valid" name="password">
+                        </div>
+                        <div>
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" class="confirm-password valid" name="confirm-password">
+                        </div>
+                    </div>
+                </div>
                 <button>Submit</button>
                 </form>
             </div>

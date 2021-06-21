@@ -129,9 +129,9 @@ h1 {
 /* -------------------------- FORM ----------------------------------*/
 
 form input, form label, form button {
-    display: block;
     width: 100%;
     margin-bottom: 10px;
+    /* display: flex; */
     }
 
  form label {
@@ -169,8 +169,31 @@ form button:hover {
     background: var(--secondary-color);
     color: #fff;
     transition: var(--transition);
-    opacity: 0.6;
+    opacity: 0.9;
 }
+
+
+.form-line {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-bottom: 0;
+}
+
+.form-line > div {
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+    /* grid-gap: 13px; */
+    
+}
+
+@media (max-width: 600px) {
+    .form-line {
+        display: block;
+    }
+}
+
 
 /* ----------------- ERR MESSAGE ------------------------*/
 
