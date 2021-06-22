@@ -117,13 +117,13 @@
     z-index: -1;
 }
 
-.modal > .card-info {
+.card-info {
     /* float: left; */
     
     /* flex-direction: column; */
     /* justify-content: space-between; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     padding: 10px 0px 10px 20px;
     bottom: 0px;
     left: 0px;
@@ -138,6 +138,7 @@
     font-size: 1.5em;
     font-weight: 600;
     margin: 15px;
+    margin-left: 0;
 }
 
 .card-info p {
