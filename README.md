@@ -4,4 +4,4 @@ In this project I've created a registration form which will generate a type of I
 
 👨🏽‍💻
 
-![Form Validation App Demo](demo/form-validation.gif)
+![Form Validation App Demo](demo/formValidation.gif)
